@@ -1,10 +1,13 @@
+import { Container } from '@material-ui/core';
 import './App.css';
+import HeaderContainer from './component/header';
 
 function App() {
   return (
-    <div style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center" }}>
-      <h1>Hello World</h1>
-    </div>
+    <Container maxWidth="xl">
+
+      <HeaderContainer />
+    </Container>
   );
 }
 
