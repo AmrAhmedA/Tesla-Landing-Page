@@ -1,13 +1,20 @@
-import { Container } from '@material-ui/core';
+import React from 'react';
 import './App.css';
 import HeaderContainer from './component/header';
 
+
 function App() {
   return (
-    <Container maxWidth="xl">
+    // <Container maxWidth="xl">
+    <React.Fragment>
 
-      <HeaderContainer />
-    </Container>
+      <div className="model-s-container">
+        <HeaderContainer />
+      </div>
+      <div className="model-s-container">
+      </div>
+    </React.Fragment>
+    // </Container>
   );
 }
 
