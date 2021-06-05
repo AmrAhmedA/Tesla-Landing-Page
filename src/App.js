@@ -7,7 +7,8 @@ import model_S_Desktop from "../src/assets/background/Model S/ms-homepage-deskto
 import model_S_Mobile from "../src/assets/background/Model S/ms-homepage-mobile.jpg"
 import model_y_Desktop from "../src/assets/background/Model Y/Desktop-ModelY.jpg"
 import model_y_Mobile from "../src/assets/background/Model Y/Mobile-ModelY.jpg"
-let scroll = Scroll.animateScroll;
+let scroller = Scroll.scroller;
+// let scroll = Scroll.animateScroll;
 const useStyles = makeStyles((theme) => ({
   landingContainer: {
     backgroundRepeat: "noRepeat",
@@ -31,9 +32,11 @@ const useStyles = makeStyles((theme) => ({
 }));
 function App() {
   const [offsetY, setOffSetY] = useState(0);
-  const handleScroll = () => setOffSetY(window.pageYOffset);
-
   const classes = useStyles();
+
+  const handleScroll = () => {
+    setOffSetY(window.pageYOffset)
+  };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
@@ -41,24 +44,33 @@ function App() {
   }, [])
 
   useEffect(() => {
-    if (offsetY === 100) {
-      scroll.scrollTo(600, { duration: "0.5s", smooth: true });
-      console.log("test")
+    if (Math.round(offsetY) === 100) {
+      scroller.scrollTo("section1", {
+        delay: 100,
+        duration: 200,
+        smooth: true
+      })
     }
-    else return
+    console.log("test")
   }, [offsetY]);
+
 
   console.log(offsetY);
   return (
     // <Container maxWidth="xl">
     <React.Fragment>
-      {/* <button onClick={() => {
-        scroll.scrollTo(600);
-      }}>Test</button> */}
+      <button onClick={() => {
+        console.log("clicked")
+        scroller.scrollTo("section1", {
+          delay: 100,
+          duration: 200,
+          smooth: true
+        });
+      }}>Test</button>
       <div className={`${classes.landingContainer} ${classes.model_S_Container}`}>
         <HeaderContainer />
       </div>
-      <div className={`${classes.landingContainer} ${classes.model_Y_Container}`}>
+      <div id="section1" className={`${classes.landingContainer} ${classes.model_Y_Container}`}>
       </div>
 
     </React.Fragment>
