@@ -1,8 +1,8 @@
 import './App.css';
 import { makeStyles } from '@material-ui/core';
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import HeaderContainer from './component/header';
-import * as Scroll from 'react-scroll';
+// import * as Scroll from 'react-scroll';
 import model_S_Desktop from "../src/assets/background/Model S/ms-homepage-desktop.jpg"
 import model_S_Mobile from "../src/assets/background/Model S/ms-homepage-mobile.jpg"
 import model_y_Desktop from "../src/assets/background/Model Y/Desktop-ModelY.jpg"
@@ -15,6 +15,7 @@ import US_Home_Desktop from "../src/assets/background/US Home/us_homepage_sp_her
 import US_Home_Mobile from "../src/assets/background/US Home/sp_homepage_m.jpg"
 import Solar_Roof_Desktop from "../src/assets/background/solar roof/solar-roof-hero-desktop.jpg"
 import Solar_Roof_Mobile from "../src/assets/background/solar roof/solar-roof-hero-mobile.jpg"
+import ChevonIcon from './assets/extra/chevonIcon';
 
 const useStyles = makeStyles((theme) => ({
   landingContainer: {
@@ -22,7 +23,7 @@ const useStyles = makeStyles((theme) => ({
     height: "100vh",
     scrollSnapType: "y mandatory",
     "&::-webkit-scrollbar": {
-      width: "0.4em",
+      width: "0.6em",
     },
     "&::-webkit-scrollbar-track": {
       background: "#eee9e9",
@@ -81,8 +82,19 @@ const useStyles = makeStyles((theme) => ({
     [theme.breakpoints.down("xs")]: {
       backgroundImage: `url(${Solar_Roof_Mobile})`,
     }
+  },
+  bounceWrapper: {
+    opacity: 1,
+    position: "absolute",
+    // bottom: "20px",
+    // left: "50%",
+    // margin-left: -16px,
+    // z-index: 2,
+    // -webkit-animation: bounce 2s infinite 2s,
+    // animation: bounce 2s infinite 2s,
+    // transition: all .2s ease-in,
   }
-}));
+}))
 function App() {
   const classes = useStyles();
 
@@ -103,6 +115,11 @@ function App() {
         <div id="section5" className={`${classes.landingSection} ${classes.us_Home}`}>
         </div>
         <div id="section6" className={`${classes.landingSection} ${classes.solar_Roof}`}>
+        </div>
+        <div className={classes.bounceWrapper}>
+          <span >
+            <ChevonIcon />
+          </span>
         </div>
       </div>
 
