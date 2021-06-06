@@ -15,8 +15,7 @@ import US_Home_Desktop from "../src/assets/background/US Home/us_homepage_sp_her
 import US_Home_Mobile from "../src/assets/background/US Home/sp_homepage_m.jpg"
 import Solar_Roof_Desktop from "../src/assets/background/solar roof/solar-roof-hero-desktop.jpg"
 import Solar_Roof_Mobile from "../src/assets/background/solar roof/solar-roof-hero-mobile.jpg"
-let scroller = Scroll.scroller;
-// let scroll = Scroll.animateScroll;
+
 const useStyles = makeStyles((theme) => ({
   landingContainer: {
     overflowY: "scroll",
@@ -85,50 +84,13 @@ const useStyles = makeStyles((theme) => ({
   }
 }));
 function App() {
-  // const [offsetY, setOffSetY] = useState(0);
   const classes = useStyles();
 
-  // const handleScroll = (e) => {
-  //   // console.log(e);
-  //   setOffSetY(window.pageYOffset)
-  // };
-
-  // useEffect(() => {
-  //   window.addEventListener("scroll", handleScroll);
-  //   return () => window.removeEventListener("scroll", handleScroll);
-  // }, [])
-
-  // useEffect(() => {
-  //   if (Math.round(offsetY) === 100) {
-  //     scroller.scrollTo("section2", {
-  //       delay: 100,
-  //       duration: 200,
-  //       smooth: true
-  //     })
-  //   }
-  //   console.log("test")
-  // }, [offsetY]);
-
-
-  // const handlescrollin = () => {
-  //   console.log("fired")
-  //   scroller.scrollTo("section2", {
-  //     delay: 100,
-  //     duration: 200,
-  //     smooth: true
-  //   })
-  // }
-
-  // console.log(offsetY);
-
   return (
-    // <Container maxWidth="xl">
     <React.Fragment>
 
-      {/* <div style={{ overflow: "hidden" }} > */}
       <div className={classes.landingContainer}>
         <div
-          //  onScroll={handlescrollin()}
           className={`${classes.landingSection} ${classes.model_S_Container}`}>
           <HeaderContainer />
         </div>
@@ -144,9 +106,7 @@ function App() {
         </div>
       </div>
 
-      {/* </div> */}
     </React.Fragment>
-    // </Container>
   );
 }
 
