@@ -21,22 +21,30 @@ const LandingContainer = () => {
 
       <div className={classes.landingContainer}>
         <div className={classes.landingLayoutWrapper}>
-          <h1 className={classes.landingHeading}>Model S</h1>
-          <h2 className={classes.landingSubHeading}>
-            Order Online for{" "}
-            <a
-              style={{ color: "#393c41" }}
-              href="https://www.facebook.com/amrahmedgewaly/"
-            >
-              Touchless Delivery
-            </a>
-          </h2>
+          <div className={classes.landingHeadingWrapper}>
+            <h1 className={classes.landingHeading}>Model S</h1>
+            <h2 className={classes.landingSubHeading}>
+              Order Online for{" "}
+              <a
+                style={{ color: "#393c41" }}
+                href="https://www.facebook.com/amrahmedgewaly/"
+              >
+                Touchless Delivery
+              </a>
+            </h2>
+          </div>
           <div className={classes.landingButtonWrapper}>
             <a
               href="https://www.facebook.com/amrahmedgewaly/"
               className={classes.landingLeftButton}
             >
               Custom Order
+            </a>
+            <a
+              href="https://www.facebook.com/amrahmedgewaly/"
+              className={classes.landingRightButton}
+            >
+              Existing Inventory
             </a>
           </div>
         </div>
