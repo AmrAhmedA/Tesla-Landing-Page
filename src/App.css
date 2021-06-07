@@ -1,7 +1,11 @@
 .App {
   text-align: center;
 }
-
+@font-face {
+	font-family: 'GothamBook';
+	src: url('./assets/font/GothamBook.eot');
+	src: local('GothamBook'), url('./assets/font/GothamBook.woff') format('woff'), url('./assets/font/GothamBook.ttf') format('truetype');
+}
 .model-s-container{ 
   background-image: url("../src//assets/background/Model\ S/ms-homepage-desktop.jpg");
   background-repeat: no-repeat;
@@ -10,7 +14,9 @@
   height: 100vh;
   /* width: 50vw; */
 }
-
+*{
+  font-family: 'GothamBook' !important;
+}
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
