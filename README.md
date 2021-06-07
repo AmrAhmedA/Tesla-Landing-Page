@@ -2,7 +2,7 @@
 An attempt to create Tesla web app landing page using React
 
 # Motivation
-Tesla's progressive web app reflect the modern vibe of the company philosophy. the interface is intuative, user-friendly.
+Tesla's progressive web app reflect the modern vibe of the company philosophy. the interface is intuative, user-friendly and it feel seamless and smooth.
 
 # About
 This project is made to refresh my mind and memory during my military army service. 
