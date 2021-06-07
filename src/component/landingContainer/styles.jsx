@@ -90,7 +90,10 @@ const useStyles = makeStyles((theme) => ({
   landingLayoutWrapper: {
     position: "sticky",
     top: "15vh",
-    marginTop: "-74vh",
+    marginTop: "-75vh",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "-63vh",
+    },
   },
   landingHeadingWrapper: {
     display: "flex",
@@ -107,6 +110,29 @@ const useStyles = makeStyles((theme) => ({
     boxSizing: "border-box",
     textAlign: "center",
     opacity: "1",
+    [theme.breakpoints.down("sm")]: {
+      marginTop: "calc(38vh + 20px)",
+    },
+  },
+  leftButtonGrid: {
+    direction: "row",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      direction: "row",
+      justifyContent: "center",
+      alignItems: "center",
+    },
+  },
+  rightButtonGrid: {
+    direction: "row",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    [theme.breakpoints.down("xs")]: {
+      direction: "row",
+      justifyContent: "center",
+      alignItems: "center",
+    },
   },
   landingLeftButton: {
     display: "flex",
@@ -153,6 +179,9 @@ const useStyles = makeStyles((theme) => ({
     outlineStyle: "none",
     outlineWidth: "0px",
     borderRadius: "25px",
+    [theme.breakpoints.down("xs")]: {
+      width: "75%",
+    },
   },
 
   landingRightButton: {
@@ -200,6 +229,9 @@ const useStyles = makeStyles((theme) => ({
     outlineStyle: "none",
     outlineWidth: "0px",
     borderRadius: "25px",
+    [theme.breakpoints.down("xs")]: {
+      width: "75%",
+    },
   },
   bounceWrapper: {
     opacity: 1,

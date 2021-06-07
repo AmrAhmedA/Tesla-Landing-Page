@@ -1,3 +1,4 @@
+import { Grid } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
 import ChevonIcon from "../../assets/extra/chevonIcon";
 import useStyles from "./styles";
@@ -33,20 +34,45 @@ const LandingContainer = () => {
               </a>
             </h2>
           </div>
-          <div className={classes.landingButtonWrapper}>
-            <a
-              href="https://www.facebook.com/amrahmedgewaly/"
-              className={classes.landingLeftButton}
+          <Grid
+            container
+            spacing={3}
+            item
+            sm={12}
+            className={classes.landingButtonWrapper}
+          >
+            <Grid
+              container
+              direction="row"
+              justify="flex-end"
+              alignItems="center"
+              item
+              xs={12}
+              sm={6}
+              className={classes.leftButtonGrid}
             >
-              Custom Order
-            </a>
-            <a
-              href="https://www.facebook.com/amrahmedgewaly/"
-              className={classes.landingRightButton}
+              <a
+                href="https://www.facebook.com/amrahmedgewaly/"
+                className={classes.landingLeftButton}
+              >
+                Custom Order
+              </a>
+            </Grid>
+            <Grid
+              container
+              item
+              xs={12}
+              sm={6}
+              className={classes.rightButtonGrid}
             >
-              Existing Inventory
-            </a>
-          </div>
+              <a
+                href="https://www.facebook.com/amrahmedgewaly/"
+                className={classes.landingRightButton}
+              >
+                Existing Inventory
+              </a>
+            </Grid>
+          </Grid>
         </div>
         <div className={classes.bounceWrapper}>
           <ChevonIcon />
