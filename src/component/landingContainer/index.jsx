@@ -6,7 +6,7 @@ const LandingContainer = () => {
 
   const handleScroll = () => {
     console.log("triggered");
-    // setOffSetY(window.pageYOffset);
+    setOffSetY(window.pageYOffset);
   };
 
   useEffect(() => {
@@ -14,43 +14,15 @@ const LandingContainer = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const handleOnScroll = () => {
-    console.log("Scrolled");
-  };
   const classes = useStyles();
   return (
     <React.Fragment>
       {console.log(offsetY)}
+
       <div className={classes.landingContainer}>
-        <div
-          style={{
-            position: "absolute",
-            width: "100%",
-            marginTop: "calc(12vh + 20px)",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "center",
-            alignItems: "center",
-            color: "#393c41",
-          }}
-        >
-          <h1
-            style={{
-              fontSize: "40px",
-              WebkitFontSmoothing: "antialiased",
-              marginBlock: "0em",
-              padding: "4px 0",
-            }}
-          >
-            Model S
-          </h1>
-          <h2
-            style={{
-              fontSize: "14px",
-              fontWeight: "400",
-              WebkitFontSmoothing: "antialiased",
-            }}
-          >
+        <div className={classes.landingLayoutWrapper}>
+          <h1 className={classes.landingHeading}>Model S</h1>
+          <h2 className={classes.landingSubHeading}>
             Order Online for{" "}
             <a
               style={{ color: "#393c41" }}
@@ -59,8 +31,15 @@ const LandingContainer = () => {
               Touchless Delivery
             </a>
           </h2>
+          <div className={classes.landingButtonWrapper}>
+            <a
+              href="https://www.facebook.com/amrahmedgewaly/"
+              className={classes.landingLeftButton}
+            >
+              Custom Order
+            </a>
+          </div>
         </div>
-
         <div className={classes.bounceWrapper}>
           <ChevonIcon />
         </div>
@@ -69,7 +48,6 @@ const LandingContainer = () => {
           className={`${classes.landingSection} ${classes.model_S_Container}`}
         ></div>
         <div
-          onScroll={() => console.log("testing")}
           className={`${classes.landingSection} ${classes.model_Y_Container}`}
         ></div>
         <div
