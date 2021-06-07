@@ -15,23 +15,16 @@ const LandingContainer = () => {
           className={`${classes.landingSection} ${classes.model_S_Container}`}
         ></div>
         <div
-          id="section2"
           className={`${classes.landingSection} ${classes.model_Y_Container}`}
         ></div>
         <div
-          id="section3"
           className={`${classes.landingSection} ${classes.model_3_Container}`}
         ></div>
         <div
-          id="section4"
           className={`${classes.landingSection} ${classes.model_X_Container}`}
         ></div>
+        <div className={`${classes.landingSection} ${classes.us_Home}`}></div>
         <div
-          id="section5"
-          className={`${classes.landingSection} ${classes.us_Home}`}
-        ></div>
-        <div
-          id="section6"
           className={`${classes.landingSection} ${classes.solar_Roof}`}
         ></div>
       </div>
