@@ -7,10 +7,9 @@ const LandingContainer = () => {
     <React.Fragment>
       <div className={classes.landingContainer}>
         <div className={classes.bounceWrapper}>
-          <span>
-            <ChevonIcon />
-          </span>
+          <ChevonIcon />
         </div>
+
         <div
           className={`${classes.landingSection} ${classes.model_S_Container}`}
         ></div>
