@@ -81,11 +81,34 @@ const useStyles = makeStyles((theme) => ({
     WebkitFontSmoothing: "antialiased",
     marginBlock: "0em",
     padding: "4px 0",
+    animation: `$landing-transform 0.5s ease-in-out 0s`,
+  },
+  "@keyframes landing-transform": {
+    "0%": {
+      opacity: 0,
+      transform: "translateY(50%)",
+    },
+    "100%": {
+      opacity: 1,
+      transform: "translateY(0)",
+    },
   },
   landingSubHeading: {
     fontSize: "14px",
     fontWeight: "400",
     WebkitFontSmoothing: "antialiased",
+    animation: `$sub-heading-fade 1s ease-in-out 0s`,
+  },
+  "@keyframes sub-heading-fade": {
+    "0%": {
+      opacity: 0,
+    },
+    "50%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 1,
+    },
   },
   landingLayoutWrapper: {
     position: "sticky",
