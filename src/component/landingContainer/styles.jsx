@@ -15,6 +15,7 @@ import { makeStyles } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   landingContainer: {
     overflowY: "scroll",
+    overflowX: "hidden",
     height: "100vh",
     scrollSnapType: "y mandatory",
     "&::-webkit-scrollbar": {
@@ -151,7 +152,7 @@ const useStyles = makeStyles((theme) => ({
   "@keyframes left-button-fade": {
     "0%": {
       opacity: 0,
-      transform: "translateX(-15%)",
+      transform: "translateX(-10%)",
     },
     "50%": {
       opacity: 0,
@@ -175,7 +176,7 @@ const useStyles = makeStyles((theme) => ({
   "@keyframes right-button-fade": {
     "0%": {
       opacity: 0,
-      transform: "translateX(15%)",
+      transform: "translateX(10%)",
     },
     "50%": {
       opacity: 0,

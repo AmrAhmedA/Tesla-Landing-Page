@@ -16,6 +16,57 @@ const LandingContainer = () => {
   }, []);
 
   const classes = useStyles();
+
+  const content = [
+    {
+      name: "Model S",
+      subHeading: "Order Online for Touchless Delivery",
+      buttons: 2,
+      leftButtonText: "Custom Order",
+      rightButtonText: "Existing Inventory",
+    },
+    {
+      name: "Model Y",
+      subHeading: "Order Online for Touchless Delivery",
+      buttons: 2,
+      leftButtonText: "Custom Order",
+      rightButtonText: "Existing Inventory",
+    },
+    {
+      name: "Model 3",
+      subHeading: "Order Online for Touchless Delivery",
+      buttons: 2,
+      leftButtonText: "Custom Order",
+      rightButtonText: "Existing Inventory",
+    },
+    {
+      name: "Model X",
+      subHeading: "Order Online for Touchless Delivery",
+      buttons: 2,
+      leftButtonText: "Custom Order",
+      rightButtonText: "Existing Inventory",
+    },
+    {
+      name: "Solar Panel",
+      subHeading: "Lowest Cost Solar Panels in America",
+      buttons: 2,
+      leftButtonText: "Order Now",
+      rightButtonText: "Learn More",
+    },
+    {
+      name: "Solar Roof",
+      subHeading: "Produce Clean Energy From Your Roof",
+      buttons: 2,
+      leftButtonText: "Order Now",
+      rightButtonText: "Learn More",
+    },
+    {
+      name: "Accessories",
+      subHeading: "",
+      buttons: 1,
+      buttonText: "Shop Now",
+    },
+  ];
   return (
     <React.Fragment>
       {console.log(offsetY)}
