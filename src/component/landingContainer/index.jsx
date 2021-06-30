@@ -24,6 +24,7 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Custom Order",
       rightButtonText: "Existing Inventory",
+      classes: "model_S_Container",
     },
     {
       name: "Model Y",
@@ -31,6 +32,7 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Custom Order",
       rightButtonText: "Existing Inventory",
+      classes: "model_Y_Container",
     },
     {
       name: "Model 3",
@@ -38,6 +40,7 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Custom Order",
       rightButtonText: "Existing Inventory",
+      classes: "model_3_Container",
     },
     {
       name: "Model X",
@@ -45,6 +48,7 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Custom Order",
       rightButtonText: "Existing Inventory",
+      classes: "model_X_Container",
     },
     {
       name: "Solar Panel",
@@ -52,6 +56,7 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Order Now",
       rightButtonText: "Learn More",
+      classes: "us_Home",
     },
     {
       name: "Solar Roof",
@@ -59,14 +64,16 @@ const LandingContainer = () => {
       buttons: 2,
       leftButtonText: "Order Now",
       rightButtonText: "Learn More",
+      classes: "solar_Roof",
     },
-    {
-      name: "Accessories",
-      subHeading: "",
-      buttons: 1,
-      buttonText: "Shop Now",
-    },
+    // {
+    //   name: "Accessories",
+    //   subHeading: "",
+    //   buttons: 1,
+    //   buttonText: "Shop Now",
+    // },
   ];
+
   return (
     <React.Fragment>
       {console.log(offsetY)}

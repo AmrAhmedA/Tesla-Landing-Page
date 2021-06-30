@@ -1,7 +1,18 @@
 import React from "react";
 const TeslaLogo = () => {
   return (
-    <a aria-label="Tesla Logo" href="/">
+    <a
+      aria-label="Tesla Logo"
+      href="/"
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        width: "120px",
+        paddingLeft: "32px",
+      }}
+    >
       <svg
         className="tds-icon tds-icon--wordmark tds-site-logo-icon"
         viewBox="0 0 342 35"
