@@ -146,6 +146,19 @@ const useStyles = makeStyles((theme) => ({
       justifyContent: "center",
       alignItems: "center",
     },
+    animation: `$left-button-fade 1s ease-in-out 0s`,
+  },
+  "@keyframes left-button-fade": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(-15%)",
+    },
+    "50%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 1,
+    },
   },
   rightButtonGrid: {
     direction: "row",
@@ -155,6 +168,20 @@ const useStyles = makeStyles((theme) => ({
       direction: "row",
       justifyContent: "center",
       alignItems: "center",
+    },
+
+    animation: `$right-button-fade 1s ease-in-out 0s`,
+  },
+  "@keyframes right-button-fade": {
+    "0%": {
+      opacity: 0,
+      transform: "translateX(15%)",
+    },
+    "50%": {
+      opacity: 0,
+    },
+    "100%": {
+      opacity: 1,
     },
   },
   landingLeftButton: {
