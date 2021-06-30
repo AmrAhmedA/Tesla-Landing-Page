@@ -9,7 +9,7 @@ const navItemsCenter = [
   { name: "Model X" },
   { name: "Model Y" },
   { name: "Solar Roof" },
-  { name: "Solar Panel" },
+  { name: "Solar Panels" },
 ];
 const navItemsEnd = [{ name: "Shop" }, { name: "Account" }, { name: "Menu" }];
 const HeaderContainer = () => {
@@ -27,54 +27,75 @@ const HeaderContainer = () => {
           position: "absolute",
         }}
       >
-        <h1>
-          <TeslaLogo />
-        </h1>
-        {navItemsCenter.map((item, index) => {
-          return (
-            <ol
-              key={index}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "0 8px",
-                listStyleType: "none",
+        <div style={{ width: "25%" }}>
+          <h1>
+            <TeslaLogo />
+          </h1>
+        </div>
 
-                color: "rgb(24, 27, 33)",
-                fontSize: "14px",
-                fontWeight: "600",
-                lineHeight: "21px",
-                // width: "50%",
-              }}
-            >
-              <li key={index}>{item.name}</li>
-            </ol>
-          );
-        })}
+        <div
+          style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            width: "45%",
+          }}
+        >
+          {navItemsCenter.map((item, index) => {
+            return (
+              <ol
+                key={index}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0 5px",
+                  listStyleType: "none",
+                  flexGrow: "1",
 
-        {navItemsEnd.map((item, index) => {
-          return (
-            <ol
-              key={index}
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                padding: "0 8px",
-                listStyleType: "none",
+                  color: "rgb(24, 27, 33)",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  lineHeight: "21px",
+                }}
+              >
+                <li key={index}>{item.name}</li>
+              </ol>
+            );
+          })}
+        </div>
 
-                color: "rgb(24, 27, 33)",
-                fontSize: "14px",
-                fontWeight: "600",
-                lineHeight: "21px",
-                // width: "50%",
-              }}
-            >
-              <li key={index}>{item.name}</li>
-            </ol>
-          );
-        })}
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "flex-end",
+            alignItems: "center",
+            width: "25%",
+            paddingRight: "32px",
+          }}
+        >
+          {navItemsEnd.map((item, index) => {
+            return (
+              <ol
+                key={index}
+                style={{
+                  display: "flex",
+                  justifyContent: "center",
+                  alignItems: "center",
+                  padding: "0 16px",
+                  listStyleType: "none",
+                  color: "rgb(24, 27, 33)",
+                  fontSize: "14px",
+                  fontWeight: "600",
+                  lineHeight: "21px",
+                }}
+              >
+                <li key={index}>{item.name}</li>
+              </ol>
+            );
+          })}
+        </div>
       </header>
     </React.Fragment>
   );
