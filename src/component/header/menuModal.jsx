@@ -43,6 +43,27 @@ const useStyles = makeStyles((theme) => ({
     position: "sticky",
     backgroundColor: "white",
   },
+  menuItem: {
+    display: "flex",
+    justifyContent: "flex-start",
+    alignItems: "center",
+    padding: "6px 12px",
+    marginBottom: "12px",
+
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "rgba(0, 0, 0, 0.05)",
+      borderRadius: "12px",
+    },
+  },
+  menuItemText: {
+    textDecoration: "none",
+    color: "rgb(57, 60, 65)",
+    fontSize: "14px",
+    fontWeight: "bold",
+    lineHeight: "21px",
+    textAlign: "left",
+  },
 }));
 const MenuModal = ({ isVisible, setIsVisible }) => {
   const menuItems = [
@@ -86,22 +107,15 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
           <ol
             style={{
               listStyleType: "none",
-              padding: "0px 48px",
+              padding: "0px 32px",
               overflow: "auto",
             }}
           >
             {menuItems.map((item, index) => (
-              <li key={index} style={{ marginBottom: "18px" }}>
+              <li key={index} className={classes.menuItem}>
                 <a
                   href={"https://www.facebook.com/amrahmedgewaly/"}
-                  style={{
-                    textDecoration: "none",
-                    color: "rgb(57, 60, 65)",
-                    fontSize: "14px",
-                    fontWeight: "bold",
-                    lineHeight: "21px",
-                    textAlign: "left",
-                  }}
+                  className={classes.menuItemText}
                 >
                   {item.name}
                 </a>
