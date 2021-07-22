@@ -49,6 +49,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     padding: "6px 12px",
     marginBottom: "12px",
+    transition: "0.2s ease-in",
 
     "&:hover": {
       cursor: "pointer",
