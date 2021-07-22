@@ -1,6 +1,49 @@
 import React from "react";
-import { IconButton, Fade, Backdrop, Modal, Grid } from "@material-ui/core";
+import {
+  makeStyles,
+  IconButton,
+  Fade,
+  Backdrop,
+  Modal,
+  Grid,
+} from "@material-ui/core";
 import CloseIcon from "@material-ui/icons/Close";
+const useStyles = makeStyles((theme) => ({
+  modalContainer: {
+    display: "flex",
+    position: "fixed",
+    alignItems: "center",
+    justifyContent: "flex-end",
+  },
+  gridWrapper: {
+    width: "311px",
+    height: "100vh",
+    minHeight: "100vh",
+    position: "relative",
+    paddingBottom: "10px",
+    flexDirection: "column",
+    backgroundColor: "white",
+    borderRadius: "10px",
+    border: "none",
+    outline: "none",
+    display: "flex",
+    animation: `$slide-right-to-left 0.5s ease-in-out`,
+  },
+  "@keyframes slide-right-to-left": {
+    "0%": { transform: "translateX(100%)", opacity: "0" },
+    "100%": { transform: "translateX(0%)", opacity: "1" },
+  },
+  closeButton: {
+    display: "flex",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    padding: "16px 32px 0px",
+    height: "80px",
+    top: "0",
+    position: "sticky",
+    backgroundColor: "white",
+  },
+}));
 const MenuModal = ({ isVisible, setIsVisible }) => {
   const menuItems = [
     { name: "Existing Inventory" },
@@ -17,17 +60,12 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
     { name: "Find Us" },
     { name: "Support" },
   ];
+  const classes = useStyles();
   return (
     <Modal
       aria-labelledby="transition-modal-title"
       aria-describedby="transition-modal-description"
-      style={{
-        display: "flex",
-        position: "fixed",
-        alignItems: "center",
-        justifyContent: "flex-end",
-        overflow: "auto",
-      }}
+      className={classes.modalContainer}
       open={isVisible}
       onClose={() => setIsVisible(false)}
       disableAutoFocus
@@ -38,34 +76,9 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
       }}
     >
       <Fade in={isVisible}>
-        <Grid
-          style={{
-            width: "311px",
-            height: "100vh",
-            minHeight: "100vh",
-            position: "relative",
-            paddingBottom: "10px",
-            flexDirection: "column",
-            backgroundColor: "white",
-            borderRadius: "10px",
-            border: "none",
-            outline: "none",
-            display: "flex",
-          }}
-        >
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-end",
-              alignItems: "center",
-              padding: "32px 32px 0px",
-              height: "80px",
-              top: "0",
-              position: "sticky",
-              backgroundColor: "white",
-            }}
-          >
-            <IconButton aria-label="close">
+        <Grid className={classes.gridWrapper}>
+          <div className={classes.closeButton}>
+            <IconButton aria-label="close" onClick={() => setIsVisible(false)}>
               <CloseIcon fontSize="small" />
             </IconButton>
           </div>
