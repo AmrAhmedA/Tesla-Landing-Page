@@ -7,7 +7,7 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
     { name: "Used Inventory" },
     { name: "Trade-In" },
     { name: "Test Drive" },
-    { name: "Cybertruck0" },
+    { name: "Cybertruck" },
     { name: "Roadster" },
     { name: "Semi" },
     { name: "Charging" },
@@ -26,7 +26,7 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
         position: "fixed",
         alignItems: "center",
         justifyContent: "flex-end",
-        // overflow: "auto",
+        overflow: "auto",
       }}
       open={isVisible}
       onClose={() => setIsVisible(false)}
@@ -42,7 +42,7 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
           style={{
             width: "311px",
             height: "100vh",
-            maxWidth: "90vw",
+            minHeight: "100vh",
             position: "relative",
             paddingBottom: "10px",
             flexDirection: "column",
@@ -59,33 +59,42 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
               justifyContent: "flex-end",
               alignItems: "center",
               padding: "32px 32px 0px",
+              height: "80px",
+              top: "0",
+              position: "sticky",
+              backgroundColor: "white",
             }}
           >
-            <IconButton aria-label="delete">
+            <IconButton aria-label="close">
               <CloseIcon fontSize="small" />
             </IconButton>
           </div>
-          <div>
-            <ol style={{ listStyleType: "none", padding: "0px 32px" }}>
-              {menuItems.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={"https://www.facebook.com/amrahmedgewaly/"}
-                    style={{
-                      textDecoration: "none",
-                      color: "rgb(57, 60, 65)",
-                      fontSize: "14px",
-                      fontWeight: "500",
-                      lineHeight: "21px",
-                      textAlign: "left",
-                    }}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
-            </ol>
-          </div>
+
+          <ol
+            style={{
+              listStyleType: "none",
+              padding: "0px 48px",
+              overflow: "auto",
+            }}
+          >
+            {menuItems.map((item, index) => (
+              <li key={index} style={{ marginBottom: "18px" }}>
+                <a
+                  href={"https://www.facebook.com/amrahmedgewaly/"}
+                  style={{
+                    textDecoration: "none",
+                    color: "rgb(57, 60, 65)",
+                    fontSize: "14px",
+                    fontWeight: "bold",
+                    lineHeight: "21px",
+                    textAlign: "left",
+                  }}
+                >
+                  {item.name}
+                </a>
+              </li>
+            ))}
+          </ol>
         </Grid>
       </Fade>
     </Modal>
