@@ -58,7 +58,7 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
               display: "flex",
               justifyContent: "flex-end",
               alignItems: "center",
-              padding: "32px 32px",
+              padding: "32px 32px 0px",
             }}
           >
             <IconButton aria-label="delete">
@@ -66,9 +66,23 @@ const MenuModal = ({ isVisible, setIsVisible }) => {
             </IconButton>
           </div>
           <div>
-            <ol style={{ listStyleType: "none" }}>
+            <ol style={{ listStyleType: "none", padding: "0px 32px" }}>
               {menuItems.map((item, index) => (
-                <li>{item.name}</li>
+                <li key={index}>
+                  <a
+                    href={"https://www.facebook.com/amrahmedgewaly/"}
+                    style={{
+                      textDecoration: "none",
+                      color: "rgb(57, 60, 65)",
+                      fontSize: "14px",
+                      fontWeight: "500",
+                      lineHeight: "21px",
+                      textAlign: "left",
+                    }}
+                  >
+                    {item.name}
+                  </a>
+                </li>
               ))}
             </ol>
           </div>
