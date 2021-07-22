@@ -1,16 +1,11 @@
 import React from "react";
+import { useState } from "react";
 import TeslaLogo from "../../assets/TESLA logo/tesla";
+import MenuModal from "./menuModal";
 import useStyles from "./styles";
-const navItemsCenter = [
-  { name: "Model S" },
-  { name: "Model 3" },
-  { name: "Model X" },
-  { name: "Model Y" },
-  { name: "Solar Roof" },
-  { name: "Solar Panels" },
-];
-const navItemsEnd = [{ name: "Shop" }, { name: "Account" }, { name: "Menu" }];
+
 const HeaderContainer = () => {
+  const [isVisible, setIsVisible] = useState(false);
   const {
     navHeader,
     navCenter,
@@ -18,6 +13,27 @@ const HeaderContainer = () => {
     navItemsCenterContainer,
     navItemsEndContainer,
   } = useStyles();
+
+  const handleMenuClick = () => {
+    console.log(isVisible);
+    setIsVisible(!isVisible);
+  };
+
+  const navItemsCenter = [
+    { name: "Model S" },
+    { name: "Model 3" },
+    { name: "Model X" },
+    { name: "Model Y" },
+    { name: "Solar Roof" },
+    { name: "Solar Panels" },
+  ];
+
+  const navItemsEnd = [
+    { name: "Shop", button: handleMenuClick },
+    { name: "Account", button: handleMenuClick },
+    { name: "Menu", button: handleMenuClick },
+  ];
+
   return (
     <React.Fragment>
       <header className={navHeader}>
@@ -40,11 +56,18 @@ const HeaderContainer = () => {
           {navItemsEnd.map((item, index) => {
             return (
               <ol key={index} className={navEnd}>
-                <li key={index}>{item.name}</li>
+                <li
+                  key={index}
+                  style={{ cursor: "pointer" }}
+                  onClick={item.button}
+                >
+                  {item.name}
+                </li>
               </ol>
             );
           })}
         </div>
+        <MenuModal isVisible={isVisible} setIsVisible={setIsVisible} />
       </header>
     </React.Fragment>
   );
