@@ -28,6 +28,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     fontWeight: "600",
     lineHeight: "21px",
+    transition: "0.2s ease-in",
+
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "rgba(0, 0, 0, 0.05)",
+      borderRadius: "12px",
+    },
   },
   navItemsEndContainer: {
     display: "flex",
@@ -47,6 +54,13 @@ const useStyles = makeStyles((theme) => ({
     fontSize: "14px",
     fontWeight: "600",
     lineHeight: "21px",
+    transition: "0.2s ease-in",
+
+    "&:hover": {
+      cursor: "pointer",
+      backgroundColor: "rgba(0, 0, 0, 0.05)",
+      borderRadius: "12px",
+    },
   },
 }));
 
